@@ -4,6 +4,8 @@ const webApp = express()
 const webServer = require('http').createServer(webApp)
 const io = require('socket.io')(webServer)
 
+const PORT = process.env.PORT || 9090
+
 const game = createGame()
 let maxConcurrentConnections = 15
 
@@ -111,8 +113,8 @@ io.on('connection', function(socket){
 
 });
 
-webServer.listen(80, function(){
-  console.log('> Server listening on port:',80)
+webServer.listen(PORT, function(){
+  console.log('> Server listening on port:',PORT)
 });
 
 function createGame() {
