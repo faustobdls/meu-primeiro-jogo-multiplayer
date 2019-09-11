@@ -18,6 +18,18 @@ webApp.get('/a31ecc0596d72f84e5ee403ddcacb3dea94ce0803fc9e6dc2eca1fbabae49a3e3a3
   res.sendFile(__dirname + '/game-admin.html')
 })
 
+webApp.get('/flutter', function(req, res) {
+  res.sendFile(__dirname + '/flutter/index.html')
+})
+
+webApp.get('/flutter/main.dart.js', function(req, res) {
+  res.sendFile(__dirname + '/flutter/main.dart.js')
+})
+
+webApp.get('/flutter/main.dart.js.map', function(req, res) {
+  res.sendFile(__dirname + '/flutter/main.dart.js.map')
+})
+
 webApp.get('/collect.mp3', function(req, res){
   res.sendFile(__dirname + '/collect.mp3')
 })
